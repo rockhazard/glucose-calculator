@@ -1,0 +1,81 @@
+/* Glucose Calculator */
+
+html {
+    background-color: #0f080f;
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+#root {
+    background-color: #663366;
+    border-style: none;
+    border-radius: 15px;
+    margin: auto;
+    width: 320px;
+    height: 130px;
+    padding: 10px;
+    margin-top: 20px;
+    /*box-shadow: 2px 2px 2px #ba5dba;*/
+}
+
+#calculate {
+    background-color: white;
+    font-size: 1em;
+    color: #663366;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px;
+    width:142px;
+    box-shadow: 2px 2px 2px #0f080f;
+}
+
+#calculate:hover {
+    color: #ba5dba;
+}
+
+#header {
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
+    color: white;
+    padding: 5px;
+}
+
+#input {
+    margin: 5px;
+    font-size: 1em;
+    width: 142px;
+    padding: 2px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #0f080f inset;
+}
+
+#output {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#home {
+    background-color: white;
+    text-align: center;
+    font-size: .5em;
+    color: #663366;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 80px;
+    padding: 2px;
+    box-shadow: 2px 2px 2px #0f080f;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ba5dba;
+}
