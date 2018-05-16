@@ -11,8 +11,7 @@ html {
     border-style: none;
     border-radius: 15px;
     margin: auto;
-    width: 70%;
-    /*width: 480px;*/
+    width: 480px;
     height: 130px;
     padding: 10px;
     margin-top: 20px;
@@ -20,6 +19,7 @@ html {
 }
 
 #calculate {
+    float: right;
     background-color: white;
     font-size: 1em;
     color: #663366;
