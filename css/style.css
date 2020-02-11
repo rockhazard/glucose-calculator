@@ -7,19 +7,40 @@ html {
 }
 
 #root {
+    display: grid;
+    align-content: center;
+    grid-gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "calc-form calc-form"
+    "output output"
+    "info home";
+    height: max-content;
     background-color: #663366;
     border-style: none;
     border-radius: 15px;
     margin: auto;
-    width: 480px;
-    height: 130px;
+    max-width: 800px;
+    height: max-content;
     padding: 10px;
     margin-top: 20px;
     /*box-shadow: 2px 2px 2px #ba5dba;*/
 }
 
+#calc-form {
+    grid-area: calc-form;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 70% auto;
+    grid-template-areas: "input calculate";
+}
+
 #calculate {
-    float: right;
+    grid-area: calculate;
     background-color: white;
     font-size: 1em;
     color: #663366;
@@ -27,8 +48,6 @@ html {
     border-style: none;
     border-radius: 5px;
     margin: 5px;
-    width: 45%;
-    /*width:220px;*/
     box-shadow: 2px 2px 2px #0f080f;
 }
 
@@ -37,40 +56,54 @@ html {
 }
 
 #header {
+    grid-area: header;
     font-family: 'Righteous', cursive;
     font-size: 2em;
     color: white;
     padding: 5px;
 }
 
-#input {
-    margin: 5px;
+#info {
+    grid-area: info;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 1em;
-    /*width: 220px;*/
-    width: 45%;
+    color: white;
+    padding: 5px;
+    margin-top: 10px
+}
+
+#input {
+    grid-area: input;
+    margin: 5px;
+    font-size: 2em;
     padding: 2px;
     border-style: none;
     border-radius: 5px;
     box-shadow: 2px 2px 2px #0f080f inset;
+    width: content;
 }
 
 #output {
+    grid-area: output;
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     margin: 5px;
 }
 
 #home {
+    display: grid;
+    grid-area: home;
+    align-content: center;
     background-color: white;
+    height: 20px;
     text-align: center;
-    font-size: .5em;
+    font-size: 1em;
     color: #663366;
     font-weight: bold;
     border-style: none;
     border-radius: 5px;
     margin: 5px;
-    width: 80px;
     padding: 2px;
     box-shadow: 2px 2px 2px #0f080f;
 }
@@ -81,4 +114,61 @@ a:link {
 
 a:hover {
     color: #ba5dba;
+}
+
+@media (max-width: 720px) {
+    #root {
+        display: grid;
+        place-items: center center;
+        grid-gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "header header"
+        "calc-form calc-form"
+        "output output"
+        "info info" 
+        "home home";
+        width: min-content;
+
+    }
+
+    #calc-form {
+        justify-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "input" "calculate";
+    }
+
+    #calculate {
+        width: 50%;
+    }
+    
+    #calc-form {
+    }
+
+    #calculate:hover {
+    }
+    
+    #header {
+    }
+    
+    #info {
+        width: 70%;
+        justify-self: inherit;
+    }
+    
+    #input {
+    }
+    
+    #output {
+    }
+    
+    #home {
+        width: min-content;
+        height: min-content;
+    }
+    
 }

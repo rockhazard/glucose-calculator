@@ -5,16 +5,21 @@
     <title>Hemoglobin A1c Calculator</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">  
 </head>
 <body>
     <div id="root">
-        <form name="calculator">
-            <label id="header">A1c Calculator</label><br>
-            <input id="input" type="text" placeholder=" glucose (mg/dL)">
-            <button id="calculate" title="Calculate A1c" type="button" >Calculate A1c</button>
+        <label id="header">A1C Calculator</label>
+        <form name="calculator" id="calc-form">
+            <input id="input" type="text" form="calculator" placeholder=" glucose (mg/dL)">
+            <button id="calculate" title="Calculate A1c" form="calculator" type="button" >Calculate A1c</button>
         </form>
-        <p id="output">Your A1c is>> </p>
+        <p id="output">Your A1C is>> </p>
+
+        <p id="info">
+            Normal A1C is below 5.7 while 5.7-6.5 is pre-diabetic. An A1C above 6.5 is considered diabetic. 
+        </p>
         <div id="home" class="info"><a href="https://rockhazard.github.io/index.html">rockhazard home</div>
     </div>
     <script type="text/javascript" src="scripts/a1c_calculator.js" ></script>
